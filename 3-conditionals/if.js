@@ -4,6 +4,14 @@
 var first = 3;
 var second = 5;
 
+if (first == second){
+  console.log("Hello");
+
+} else {
+console.log("Goodbye");
+
+}
+
 // 2 - Expand your answer above to
 // console log "Goodbye" if
 // the variables are not equal
@@ -15,3 +23,11 @@ var second = 5;
 // than second. If second is greater than first
 // assign the difference of the first & second
 // variables to third.
+if (first > second) {
+ var third = first + second;
+
+} else if (second > first){
+ var third = second - first;
+} else {
+  console.log('meow');
+}
