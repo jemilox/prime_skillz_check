@@ -22,6 +22,8 @@ prime.doThis = function(){
   console.log(address);
 };
 
+//call the function like so:
+prime.doThis();
 
 console.log(prime);
 

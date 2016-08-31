@@ -4,9 +4,11 @@
 # 1 - What is the command for changing directories?
 cd
 # 2 - What is a quick way to get to your user's directory?
-cd~
+cd ~ #remember the spaces
+# Also just cd will work to get you home/to the users directory. 
+
 # 3 - What is a quick way to get to the root directory?
-cd/
+cd /
 # 4 - How do you quickly create an empty file?
 touch
 # 5 - What is the command for creating a new directory?

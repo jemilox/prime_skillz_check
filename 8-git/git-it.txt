@@ -7,6 +7,10 @@ git init
 git log
 # Type the command for creating a new branch called newstuff in the current repository
 git branch newstuff
+# Also try:
+git checkout -b newstuff
+#This will jump onto the new branch you created. I find I use this more often.
+
 # Type the command for checking out the branch newstuff
 git checkout newstuff
 # Type the command for adding all files to the staging area
@@ -15,5 +19,7 @@ git add .
 git commit -m "I have made some updates"
 # Type the command for pushing all commits on the current branch to a the master branch in a remote repo nicknamed origin
 git push
+#What happens if the local branch isn't linked to the remote branch yet?
+git push 
 # Type the command for getting updates from the master branch on origin
 git pull

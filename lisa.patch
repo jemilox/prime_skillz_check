@@ -1,0 +1,125 @@
+diff --git a/1-variables/operators.js b/1-variables/operators.js
+index 4433144..f1a27e4 100644
+--- a/1-variables/operators.js
++++ b/1-variables/operators.js
+@@ -3,6 +3,14 @@ var pi = 17;
+ // 2 - Create a new variable called peeps and assign it the value of pi
+ var peeps = pi;
+ // 3 - Decrease the value of peeps by 1
+-peeps -= 1
++peeps -= 1;
+ // 4 - Write a console log that checks if pi is equal to peeps
+-console.log(pi == peeps);
++console.log(pi === peeps);
++
++// consider using ===, in this case you would get the same thing, but what
++// if one of the values was a string? For ex see the following:
++
++var pi = '17';
++var test = 17;
++
++console.log(test === pi);
+diff --git a/2-loops/all_your_loops.js b/2-loops/all_your_loops.js
+index 1560bc7..b013716 100644
+--- a/2-loops/all_your_loops.js
++++ b/2-loops/all_your_loops.js
+@@ -9,7 +9,11 @@ console.log(checkz);
+ // 2 - Write a while loop that runs
+ // 3 times. Each iteration will decrease
+ // the value of checkz by -2
++
++// reset you i (iterator) = 0, this will make your while loop more readable
++//i = 0
+ while (i < 8){
++  console.log('looop');
+   checkz -= 2;
+   i++;
+ }
+diff --git a/3-conditionals/if.js b/3-conditionals/if.js
+index fed7797..4183316 100644
+--- a/3-conditionals/if.js
++++ b/3-conditionals/if.js
+@@ -4,6 +4,7 @@
+ var first = 3;
+ var second = 5;
+ 
++// Again, favor === over ==
+ if (first == second){
+   console.log("Hello");
+ 
+@@ -29,5 +30,7 @@ if (first > second) {
+ } else if (second > first){
+  var third = second - first;
+ } else {
++  // nice handling the case if they are equal. This was probably a poorly worded
++  // question and you came up with a great solution.
+   console.log('meow');
+ }
+diff --git a/4-arrays/builtins.js b/4-arrays/builtins.js
+index c0cf5bb..b8fc632 100644
+--- a/4-arrays/builtins.js
++++ b/4-arrays/builtins.js
+@@ -18,7 +18,8 @@ console.log(arr);
+ // each array value from smallest
+ // to largest.
+ 
+-arr.sort(function(a, b){return a-b});
++arr.sort(function(a,b){return a-b;});
++arr.sort(); // arr.sort defaults to smallest to largest, nice find above though!
+ 
+ console.log(arr);
+ // 4 - Use the map method to
+diff --git a/6-objects/literal.js b/6-objects/literal.js
+index b2286c4..9bc52c4 100644
+--- a/6-objects/literal.js
++++ b/6-objects/literal.js
+@@ -22,6 +22,8 @@ prime.doThis = function(){
+   console.log(address);
+ };
+ 
++//call the function like so:
++prime.doThis();
+ 
+ console.log(prime);
+ 
+diff --git a/7-terminal/commands.txt b/7-terminal/commands.txt
+index 6b3e101..d945b70 100644
+--- a/7-terminal/commands.txt
++++ b/7-terminal/commands.txt
+@@ -4,9 +4,11 @@
+ # 1 - What is the command for changing directories?
+ cd
+ # 2 - What is a quick way to get to your user's directory?
+-cd~
++cd ~ #remember the spaces
++# Also just cd will work to get you home/to the users directory. 
++
+ # 3 - What is a quick way to get to the root directory?
+-cd/
++cd /
+ # 4 - How do you quickly create an empty file?
+ touch
+ # 5 - What is the command for creating a new directory?
+diff --git a/8-git/git-it.txt b/8-git/git-it.txt
+index e79a87e..2ff504d 100644
+--- a/8-git/git-it.txt
++++ b/8-git/git-it.txt
+@@ -7,6 +7,10 @@ git init
+ git log
+ # Type the command for creating a new branch called newstuff in the current repository
+ git branch newstuff
++# Also try:
++git checkout -b newstuff
++#This will jump onto the new branch you created. I find I use this more often.
++
+ # Type the command for checking out the branch newstuff
+ git checkout newstuff
+ # Type the command for adding all files to the staging area
+@@ -15,5 +19,7 @@ git add .
+ git commit -m "I have made some updates"
+ # Type the command for pushing all commits on the current branch to a the master branch in a remote repo nicknamed origin
+ git push
++#What happens if the local branch isn't linked to the remote branch yet?
++git push 
+ # Type the command for getting updates from the master branch on origin
+ git pull

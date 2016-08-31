@@ -18,7 +18,8 @@ console.log(arr);
 // each array value from smallest
 // to largest.
 
-arr.sort(function(a, b){return a-b});
+arr.sort(function(a,b){return a-b;});
+arr.sort(); // arr.sort defaults to smallest to largest, nice find above though!
 
 console.log(arr);
 // 4 - Use the map method to

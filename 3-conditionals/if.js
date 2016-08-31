@@ -4,6 +4,7 @@
 var first = 3;
 var second = 5;
 
+// Again, favor === over ==
 if (first == second){
   console.log("Hello");
 
@@ -29,5 +30,7 @@ if (first > second) {
 } else if (second > first){
  var third = second - first;
 } else {
+  // nice handling the case if they are equal. This was probably a poorly worded
+  // question and you came up with a great solution.
   console.log('meow');
 }
